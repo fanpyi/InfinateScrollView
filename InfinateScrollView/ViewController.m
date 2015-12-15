@@ -53,7 +53,8 @@ static NSString *const InfinateViewCellIdentifier = @"InfinateViewCellIdentifier
    
 }
 -(void)infinateScrollView:(InfinateScrollView *)infinateScrollView didSelectAtPageIndex:(NSInteger)index{
-    NSLog(@"didSelectAtPageIndex = %ld",index);
+    NSString *t = infinateScrollView == self.horizontalScrollView ? @"horizontalScrollView": @"verticalScrollView";
+    NSLog(@"%@ didSelectAtPageIndex = %ld",t,index);
 }
 
 @end
